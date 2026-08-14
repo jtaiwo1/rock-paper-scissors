@@ -33,7 +33,29 @@ const roundsToWin = 3;
 
 let user1Turn = true;
 
+const drawBoard = () => {
+  console.clear();
+
+  console.log(`  Player 1 (X): ${user1Score}    Player 2 (O): ${user2Score}    (first to ${roundsToWin})\n`);
+ 
+  const c = (pos) => {
+  if (board[pos] === "") {
+    return " ";          
+  }            
+  else {
+    return board[pos];     
+  }
+};
+  
+  console.log(` ${c(1)} | ${c(2)} | ${c(3)}  `);
+  console.log("---+---+---");
+  console.log(` ${c(4)} | ${c(5)} | ${c(6)}  `);
+  console.log("---+---+---");
+  console.log(` ${c(7)} | ${c(8)} | ${c(9)}  \n`);
+};
+
 async function userTurn() {
+  drawBoard()
   if (user1Score == roundsToWin) {
     console.log("Winner winner, chicken dinner! User 1 WINS");
   } else if (user2Score == roundsToWin) {
