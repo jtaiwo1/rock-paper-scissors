@@ -10,7 +10,7 @@ const ask = (question) => {
   });
 };
 
-const board = {
+let board = {
   1: "",
   2: "",
   3: "",
@@ -22,19 +22,23 @@ const board = {
   9: "",
 };
 
-const board1 = {};
+let board1 = {};
 
-const user1Pos = [];
-const user2Pos = [];
+let user1Pos = [];
+let user2Pos = [];
 
-const user1Score = 0;
-const user2Score = 0;
-const roundsToWin = 0;
+let user1Score = 0;
+let user2Score = 0;
+const roundsToWin = 3;
 
 let user1Turn = true;
 
 async function userTurn() {
-  if (endGame() == false) {
+  if (user1Score == roundsToWin) {
+    console.log("Winner winner, chicken dinner! User 1 WINS");
+  } else if (user2Score == roundsToWin) {
+    console.log("Winner winner, chicken dinner! User 2 WINS");
+  } else if (endGame() == false) {
     if (user1Turn == true) {
       let userInput = await ask("Player 1's turn ");
       if (validTurn(userInput) === true) {
@@ -58,9 +62,19 @@ async function userTurn() {
     }
   } else {
     if (user1Turn == false) {
-      console.log("Game over! User 1 wins");
+      console.log("Round over! User 1 wins");
+      user1Score += 1;
+      user1Pos = [];
+      user2Pos = [];
+      board = { 1: "", 2: "", 3: "", 4: "", 5: "", 6: "", 7: "", 8: "", 9: "" };
+      userTurn();
     } else {
-      console.log("Game over! User 2 wins");
+      console.log("Round over! User 2 wins");
+      user2Score += 1;
+      user1Pos = [];
+      user2Pos = [];
+      board = { 1: "", 2: "", 3: "", 4: "", 5: "", 6: "", 7: "", 8: "", 9: "" };
+      userTurn();
     }
   }
 }
