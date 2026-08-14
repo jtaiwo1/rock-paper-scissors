@@ -1,4 +1,4 @@
-# Pseudocode
+# Pseudocode for rock, paper, scissor
 
 Write welcome messaged
 
@@ -24,6 +24,6 @@ playRound(){
         return null
     }
     else if (enter if statement for each condition){
-        
+
     }
 }
