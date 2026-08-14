@@ -10,6 +10,7 @@ const ask = (question) => {
   });
 };
 
+
 const playerScore = 0;
 const computerScore = 0;
 const roundsToWin = 3;
@@ -18,7 +19,7 @@ const roundsToWin = 3;
 
 async function playRound () {
   let choices = ["rock", "paper", "scissors"];
-  let userInput = await ask("Do you choose rock, paper or scissors?", "rock");
+  let userInput = await ask("Do you choose rock, paper or scissors?");
 
   if (
     userInput === "paper" ||
@@ -27,7 +28,7 @@ async function playRound () {
   ) {
     console.log(`You chose ${userInput}`);
   } else {
-    userInput = prompt("Invalid option. Try again.");
+    userInput = ask("Invalid option. Try again.");
   }
 
 
