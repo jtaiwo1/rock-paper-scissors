@@ -27,3 +27,26 @@ playRound(){
 
     }
 }
+
+# Pseudocode for tic-tac-toe
+
+Two player game where players **X** and **O** take turns inputting their positions on a board object using numbers 1-9 as keys. The goal of the game is to get three marked positions in a row, either horizontally, vertically or diagonally. 
+
+Players take turns inputting their values in the correct positions. If a player wants to input their "mark" onto a taken position, they will be prompted to re-enter. 
+
+## Example of board logic
+
+``` js
+const board = {
+    1: "",
+    2: "",
+    3: "",
+    4: "",
+    5: "",
+    6: "",
+    7: "",
+    8: "",
+    9: "",
+}
+
+```

@@ -1,0 +1,24 @@
+{
+  "name": "rock-paper-scissors",
+  "version": "1.0.0",
+  "description": "Write welcome messaged",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jtaiwo1/rock-paper-scissors.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/jtaiwo1/rock-paper-scissors/issues"
+  },
+  "homepage": "https://github.com/jtaiwo1/rock-paper-scissors#readme",
+  "dependencies": {
+    "prompt": "^1.3.0"
+  }
+}
